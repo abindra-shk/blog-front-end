@@ -1,70 +1,78 @@
 {
-  "name": "blog-frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.39",
-    "@types/react": "^18.2.18",
-    "@types/react-dom": "^18.2.7",
-    "@types/react-redux": "^7.1.25",
-    "@types/react-router-dom": "^5.3.3",
-    "axios": "^1.4.0",
-    "eslint": "^8.46.0",
-    "husky": "^8.0.3",
-    "moment": "^2.29.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "redux": "^4.2.1",
-    "redux-thunk": "^2.4.2",
-    "sass": "^1.64.2",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "eslint-plugin-functional": "^6.0.0",
-    "lint-staged": "^13.2.3",
-    "postcss": "^8.4.27",
-    "prettier": "^3.0.0",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^4.9.5",
-    "tsc-files": "^1.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
+    "name": "blog-frontend",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.5.2",
+        "@types/node": "^16.18.39",
+        "@types/react": "^18.2.18",
+        "@types/react-dom": "^18.2.7",
+        "@types/react-redux": "^7.1.25",
+        "@types/react-router-dom": "^5.3.3",
+        "axios": "^1.4.0",
+        "eslint": "^8.46.0",
+        "husky": "^8.0.3",
+        "moment": "^2.29.4",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "5.0.1",
+        "redux": "^4.2.1",
+        "redux-thunk": "^2.4.2",
+        "sass": "^1.64.2",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.6.7",
+        "@commitlint/config-conventional": "^17.6.7",
+        "autoprefixer": "^10.4.14",
+        "eslint-plugin-functional": "^6.0.0",
+        "husky": "^8.0.0",
+        "lint-staged": "^13.2.3",
+        "postcss": "^8.4.27",
+        "prettier": "^3.0.0",
+        "tailwindcss": "^3.3.3",
+        "tsc-files": "^1.1.4",
+        "typescript": "^4.9.5"
+    },
+    "scripts": {
+        "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "lint": "eslint src --color",
         "prettier": "prettier src -check",
-        "lint-staged": "lint-staged --config lint-staged.js",
+        "lint-staged": "lint-staged --config .lintstagedrc.json",
         "husky-install": "husky install",
         "format": "prettier --write .",
         "prepare": "husky install",
         "lint:fix": "eslint --fix",
         "prettier:format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc",
         "eslint:fix": "npx tsc --noEmit && npx eslint --fix . && npx prettier --write ."
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    },
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx}": [
+            "npm run lint"
+        ]
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
