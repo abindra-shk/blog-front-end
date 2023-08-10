@@ -33,6 +33,7 @@
         "dayjs": "^1.11.9",
         "embla-carousel-react": "^7.1.0",
         "eslint": "^8.46.0",
+        "eslint-config-prettier": "^8.9.0",
         "husky": "^8.0.3",
         "moment": "^2.29.4",
         "react": "^18.2.0",
