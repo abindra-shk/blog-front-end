@@ -40,6 +40,7 @@ module.exports = {
         'functional/immutable-data': 'off',
         '@typescript-eslint/restrict-plus-operands': 'off',
         '@typescript-eslint/restrict-template-expressions': 'off',
+        'functional/prefer-immutable-types': 'off',
         'functional/no-let': 'off',
         'functional/prefer-readonly-type': 'off',
         quotes: [
